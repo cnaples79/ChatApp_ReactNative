@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import LoginScreen from './src/LoginScreen';
+import ChatRoomListScreen from './src/ChatRoomListScreen';
+import ChatRoomScreen from './src/ChatRoomScreen';
+import DirectMessageScreen from './src/DirectMessageScreen';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+const Stack = createNativeStackNavigator();
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const App = () => {
+    return (
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName="Login">
+                <Stack.Screen name="Login" component={LoginScreen} />
+                <Stack.Screen name="ChatRoomList" component={ChatRoomListScreen} />
+                <Stack.Screen name="ChatRoom" component={ChatRoomScreen} />
+                <Stack.Screen name="DirectMessage" component={DirectMessageScreen} />
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
+};
+
+export default App;
