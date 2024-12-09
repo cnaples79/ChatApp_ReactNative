@@ -3,7 +3,7 @@ import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native
 
 const ChatRoomListScreen = ({ navigation, route }) => {
     const { userId } = route.params;
-    const chatRooms = ['General', 'Technology', 'Random']; // Default chat rooms
+    const chatRooms = ['General', 'Technology', 'Random', 'Sports', 'Movies']; // Added more chat rooms
 
     return (
         <View style={styles.container}>
