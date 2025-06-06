@@ -1,4 +1,4 @@
-# Chat App
+# Multi-Platform Chat App
 
 ## Overview
 This is a simple chat application built using React Native and Expo. The app allows users to join chat rooms, send messages anonymously, and interact with other users in real-time. The UI is designed with a black and blue theme to provide a modern and sleek appearance.
